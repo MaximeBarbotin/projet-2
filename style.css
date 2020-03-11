@@ -64,6 +64,7 @@ h2{
     font-weight: 550;
 }
 
+/*loisirs bloc*/
 .loisirs_bloc{
     position: absolute;
     bottom: 0;
@@ -76,11 +77,11 @@ h2{
     justify-content: space-around;
 }
 
-
 .loisirs_content img{
     height: 70px;
 }
 
+/*style des listes contact bloc*/
 .left_bloc a{
     color: black;
     font-style: italic;
@@ -113,8 +114,8 @@ h2{
 .profil_picture_2{
     border-radius: 50%;
     width: 200px;
-    border: #00508E 4px solid;
-    margin: auto;
+    border: #0063B1 4px solid;
+    margin: -50px 0px 0px 15px;
     position: relative;
     float: right;
 }
