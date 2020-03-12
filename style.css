@@ -13,6 +13,34 @@ body{
     flex-direction: row-reverse;
 }
 
+
+/*List style*/
+ul {
+    list-style: none; 
+  }
+  
+ul li::before {
+content: '\25CF';  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+color: #0063B1;
+display: inline-block;
+width: 1em; 
+margin-left: -1.8em;
+margin-right: 12px;
+font-family: Arial;
+font-weight: 1000;
+}
+
+ul.current>li::before {
+    content: '\29BF';
+}
+
+ul.listing>li::before {
+    content: '\25CF';
+    color: black;
+    margin-right: 0px;
+}
+
+
 /*colonne gauche*/
 .profil_picture{
     border-radius: 50%;
@@ -27,36 +55,41 @@ body{
 .left_bloc{
     background: #0063B1;
     font: bold;
-    color: black;
-    margin-right: -30px; 
-    min-height: 1400px; 
+    color: black;  
+}
+
+.contact_content li{
+    list-style: none;
+    margin-bottom: 8px;
+    margin-top: 20px;
+    margin-left: -15px;
+}
+
+.a_propos_content{
+    margin-top: -60px;
 }
 
 .a_propos_content, .loisirs_content{
     padding: 50px;
 }
 
+.a_propos_content li{
+    margin-bottom: 8px;
+    margin-top: 20px;
+}
+
 .contact_content{
-    padding: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .left_title{
     background: #263238;
     text-align: center;
-    margin-top: 10px;
-    padding-bottom: 5px;
+    margin-top: 40px;
+    padding-bottom: 7px;
     padding-top: 10px;
     color: #0063B1;
-}
-
-.contact_title{
-    margin-top: 40px;
-    margin-bottom: 25px;
-}
-
-.contact_content li{
-    margin-bottom: 8px;
-    margin-top: 15px;
 }
 
 h2{
@@ -64,57 +97,66 @@ h2{
     font-weight: 550;
 }
 
+/*loisirs bloc*/
 .loisirs_bloc{
-    position: absolute;
+    position: relative;
     bottom: 0;
-    width: 100%;
-    background: #0063B1;
 }
 
 .loisirs_content{
     display: flex;
     justify-content: space-around;
+    padding: 30px;
+}
+
+.loisirs_content i{
+    color: #00467D;
+    font-size: 2em;
+    border: #00467D 2px solid;
+    border-radius: 50%;
+    padding: 10px;
 }
 
 
-.loisirs_content img{
-    height: 70px;
-}
 
+/*style des listes contact bloc*/
 .left_bloc a{
     color: black;
     font-style: italic;
+    text-decoration: none;
 }
 
 .left_bloc a:hover{
     color: #262626;
     text-decoration: none;
+    font-weight: bold;
 }
+
 
 /*colonne droite*/
 .right_bloc{
-    padding: 40px;
+    padding: 20px;
     background: #E4E4E4;   
-    min-height: 1400px;
-    display: table;
 }
 
-.right_bloc p{
-    padding: 10px 20px 0px 20px;
+
+.marging{
+    margin: 0px 5px 0px 10px;
 }
 
 .right_title{
-    text-shadow: rgb(100, 100, 100) 1px 1px 5px;
+    
     border-bottom: #0063B1 solid 3px;
     padding-bottom: 10px;
     margin-top: 30px;
 }
 
+/*en-tete*/
 .profil_picture_2{
     border-radius: 50%;
     width: 200px;
-    border: #00508E 4px solid;
-    margin: auto;
+    border: #0063B1 4px solid;
+    margin: -50px 0px 0px 15px;
     position: relative;
     float: right;
 }
@@ -146,36 +188,174 @@ h2{
     padding-bottom: 5px;
 }
 
+/*fomation*/
+
+/*experience PRO*/
+
+/*Recommandations*/
+
+.right_text{
+    display: flex;
+    padding-left: 20px;
+}
+
+.left_side{
+    display: block;
+    width: 30%;
+}
+
+.left_side li{
+    margin-left: -20px;
+    margin-bottom: -13px;
+}
+.place{
+    margin-left: 30px;
+}
+
+.right_side{
+    display: block;
+    width: 70%;
+    margin-right: 0px;
+}
+
+.right_bloc i{
+    margin-right: 25px;
+    color: #0063B1;
+    width: 25px;   
+}
+
+h4{
+    margin-top: 17px;
+    margin-bottom: 10px;
+    margin-left: 0px;
+}
+
+h5{
+    font-weight: 500;
+    font-size: 1em;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+/*lieus de formations*/
+.place{
+    font-style: italic;
+}
+
+.recommandation_bloc_1, .recommandation_bloc_2{
+    line-height: 40%;
+    text-align: center;
+}
+
+.recommandations_bloc ul{
+    margin: 0;
+
+}
+
+.recommandations_bloc a{
+    text-decoration: none;
+    color: #0063B1;
+}
+
+.recommandations_bloc a:hover{
+    color: #004073;
+    font-weight: bold;
+}
+
+.strong_name{
+    font-weight: 600;
+}
+
+
+/*Responsive design*/
+
+body{
+    max-width: 1000px;
+    margin: auto;
+}
+
+/*left bloc responsive*/
+
+.left_bloc{
+    max-width: 350px;
+    min-width: 310px;
+}
+
+
+/*right bloc responsive*/
+
+.right_bloc{
+    max-width: 650px;
+    min-width: 382px;
+}
+
+
 /*conditions écrans téléphone*/
-@media screen and (max-width: 767px){
+@media screen and (max-width: 789px){
+
+    .content{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
 
     .profil_picture{
         display: none;
     }
 
-    .contact_title{
-        margin-top: -10px;
-        margin-bottom: 25px;
+    /*bloc droit*/
+    
+    .right_bloc{
+        max-width: 789px;
     }
 
     .left_bloc{
-        min-height: 900px;
+        max-width: 789px;
     }
 
-    .right_bloc{
-        min-height: 900px;
+    /*Contenu droit*/
+    .right_text{
+        display: flex;
+        flex-direction: column;
+        
     }
 
-    
+    .right_side{
+        width: 100%;
+    }
+
+    .contact_title{
+        margin-top: -0px;
+    }
+   
+}
+
+@media screen and (max-width: 550px){
+
+    .profil_picture_2{
+        border-radius: 50%;
+        width: 150px;
+        border: #0063B1 4px solid;
+        margin: -50px 0px 0px 15px;
+        position: relative;
+        float: right;
+    }
+
 }
 
 /*conditions écrans PC*/
-@media screen and (min-width:768px){
+@media screen and (min-width:790px){
 
     .profil_picture_2{
         display: none;
         
     }
+
+    .content{
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
 
 
 }
