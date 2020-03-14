@@ -393,6 +393,14 @@ h5{
         margin-bottom: -50px;
     }
 
+    .left_bloc{
+        min-width: 0px;
+    }
+
+    .right_bloc{
+        min-width: 0px;
+    }
+
 }
 
 /*conditions écrans PC*/
