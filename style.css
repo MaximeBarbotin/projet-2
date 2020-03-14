@@ -225,7 +225,10 @@ h2{
 .left_side li{
     margin-left: -20px;
     margin-bottom: -13px;
+    width: 100%;
 }
+
+.left_side 
 
 /*lieus de formations*/
 .place{
@@ -437,5 +440,10 @@ h5{
 
     .right_side{
         width: 95%;
+    }
+
+    .left_side{
+        display: block;
+        width: 100%;
     }
 }
