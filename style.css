@@ -1,4 +1,4 @@
-/*général*/
+/*main style*/
 body{
     margin: 0px;
 	padding: 0px;
@@ -43,11 +43,10 @@ ul.current>li::before {
 ul.listing>li::before {
     content: '\25CF';
     color: black;
-    margin-right: 0px;
 }
 
 
-/*colonne gauche*/
+/*left part (blue)*/
 .profil_picture{
     border-radius: 50%;
     width: 200px;
@@ -99,7 +98,7 @@ h2{
     padding-right: 20px;
 }
 
-/*style des listes contact bloc*/
+/*list-style contact bloc*/
 .left_bloc a{
     color: black;
     font-style: italic;
@@ -143,9 +142,9 @@ h2{
 }
 
 .loisirs_content i{
-    color: #00467D;
+    color: #263238;
     font-size: 2em;
-    border: #00467D 2px solid;
+    border: #263238 2px solid;
     border-radius: 50%;
     padding: 10px;
 }
@@ -156,9 +155,9 @@ h2{
 
 
 
-/*colonne droite*/
+/*right part (white)*/
 .right_bloc{
-    padding: 20px;
+    padding: 40px;
     background: #E4E4E4;   
 }
 
@@ -212,7 +211,7 @@ h2{
 }
 
 
-/*fomation*/
+/*formation*/
 /*experience PRO*/
 /*Recommandations*/
 
@@ -230,7 +229,7 @@ h2{
 
 .left_side 
 
-/*lieus de formations*/
+/*formations places*/
 .place{
     margin-left: 20px;
     font-style: italic;
@@ -245,7 +244,7 @@ h2{
 
 .right_text{
     display: flex;
-    padding-left: 20px;
+    margin-left: 8px;
 }
 
 .right_bloc i{
@@ -269,21 +268,19 @@ h5{
 
 
 /*recommandations bloc*/
-.recommandations_bloc{
-    padding-bottom: 20px;
-}
 
 .recommandations_content{
     display: flex;
     flex-direction: row;
     width: 100%;
-    justify-content: center;
+    justify-content: flex-start;
+    margin-left: -8px;
 }
 
 .recommandation_bloc_1, .recommandation_bloc_2{
     line-height: 40%;
-    text-align: center;
-    margin: 15px;
+    padding-right: 70px;
+
 }
 
 .recommandations_bloc ul{
@@ -328,7 +325,7 @@ h5{
 
 /*Media queries*/ 
 
-/*conditions écrans téléphone*/
+/*conditions smartphone display*/
 @media screen and (max-width: 789px){
 
     /*main page*/
@@ -361,7 +358,7 @@ h5{
         margin-bottom: 200px;
     }
 
-    /*Contenu droit*/
+    /*Right content*/
     .right_text{
         display: flex;
         flex-direction: column;
@@ -376,7 +373,7 @@ h5{
    
 }
 
-/*conditions petit ecran telephones*/
+/*conditions small smartphone display*/
 @media screen and (max-width: 550px){
 
     .profil_picture_2{
@@ -406,7 +403,7 @@ h5{
 
 }
 
-/*conditions écrans PC*/
+/*conditions PC display*/
 @media screen and (min-width:790px){
 
     .profil_picture_2{
@@ -423,13 +420,19 @@ h5{
 
 }
 
-/*conditions pour recommandation et palce and date content*/
+/*conditions for recommandations, place and date content*/
 @media screen and (max-width: 960px){
 
     .recommandations_content{
         display: flex;
         flex-direction: column;
         width: 100%;
+    }
+
+    .recommandation_bloc_1, .recommandation_bloc_2{
+        text-align: center;
+        margin-bottom: 20px;
+        padding-right: 0px;
     }
 
     .right_text{
