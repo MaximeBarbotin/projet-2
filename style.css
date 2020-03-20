@@ -393,12 +393,28 @@ h5{
         margin-bottom: -50px;
     }
 
-    .left_bloc{
+    /*right bloc*/
+    .right_bloc{
         min-width: 0px;
     }
 
     .right_bloc{
+        padding: 20px;   
+    }
+
+    /*left bloc*/
+    .left_bloc{
         min-width: 0px;
+    }
+
+    .a_propos_content, .loisirs_content{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .contact_content{
+        padding-left: 0px;
+        padding-right: 0px;
     }
 
 }
