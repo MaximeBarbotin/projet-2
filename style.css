@@ -1,4 +1,4 @@
-/*général*/
+/*main style*/
 body{
     margin: 0px;
 	padding: 0px;
@@ -6,11 +6,17 @@ body{
     width: 100%;
     height: 100%;
     background: white;
+    max-width: 1000px;
+    margin: auto;
 }
 
 .row{
     display: flex;
     flex-direction: row-reverse;
+}
+
+.html_corrector{
+    display: none;
 }
 
 
@@ -37,11 +43,10 @@ ul.current>li::before {
 ul.listing>li::before {
     content: '\25CF';
     color: black;
-    margin-right: 0px;
 }
 
 
-/*colonne gauche*/
+/*left part (blue)*/
 .profil_picture{
     border-radius: 50%;
     width: 200px;
@@ -49,40 +54,17 @@ ul.listing>li::before {
     margin: auto;
     display: block;
     position: relative;
-    top: 20px;
+    top: 40px;
 }
 
 .left_bloc{
     background: #0063B1;
     font: bold;
     color: black;  
+    position: relative;
 }
 
-.contact_content li{
-    list-style: none;
-    margin-bottom: 8px;
-    margin-top: 20px;
-    margin-left: -15px;
-}
-
-.a_propos_content{
-    margin-top: -60px;
-}
-
-.a_propos_content, .loisirs_content{
-    padding: 50px;
-}
-
-.a_propos_content li{
-    margin-bottom: 8px;
-    margin-top: 20px;
-}
-
-.contact_content{
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
+/*left title*/
 .left_title{
     background: #263238;
     text-align: center;
@@ -94,32 +76,29 @@ ul.listing>li::before {
 
 h2{
     font-size: 1.7em;
-    font-weight: 550;
-}
-
-/*loisirs bloc*/
-.loisirs_bloc{
-    position: relative;
-    bottom: 0;
-}
-
-.loisirs_content{
-    display: flex;
-    justify-content: space-around;
-    padding: 30px;
-}
-
-.loisirs_content i{
-    color: #00467D;
-    font-size: 2em;
-    border: #00467D 2px solid;
-    border-radius: 50%;
-    padding: 10px;
+    font-weight: 600;
 }
 
 
+/*contact bloc*/
 
-/*style des listes contact bloc*/
+.contact_bloc{
+    margin-top: 80px;
+}
+
+.contact_content li{
+    list-style: none;
+    margin-bottom: 8px;
+    margin-top: 20px;
+    margin-left: -15px;
+}
+
+.contact_content{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/*list-style contact bloc*/
 .left_bloc a{
     color: black;
     font-style: italic;
@@ -133,17 +112,60 @@ h2{
 }
 
 
-/*colonne droite*/
-.right_bloc{
-    padding: 20px;
-    background: #E4E4E4;   
+/*a propos de moi bloc*/
+.a_propos_content{
+    margin-top: -60px;
 }
 
+.a_propos_content, .loisirs_content{
+    padding: 50px;
+}
+
+.a_propos_content li{
+    margin-bottom: 8px;
+    margin-top: 20px;
+}
+
+
+/*loisirs bloc*/
+.loisirs_bloc{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.loisirs_content{
+    display: flex;
+    justify-content: space-around;
+    padding: 30px;
+    margin-top: -15px;
+}
+
+.loisirs_content i{
+    color: #263238;
+    font-size: 2em;
+    border: #263238 2px solid;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.loisirs-title{
+    margin-bottom: 0px;
+}
+
+
+
+/*right part (white)*/
+.right_bloc{
+    padding: 40px;
+    background: #E4E4E4;   
+}
 
 .marging{
     margin: 0px 5px 0px 10px;
 }
 
+/*right title*/
 .right_title{
     
     border-bottom: #0063B1 solid 3px;
@@ -156,7 +178,7 @@ h2{
     border-radius: 50%;
     width: 200px;
     border: #0063B1 4px solid;
-    margin: -50px 0px 0px 15px;
+    margin: -30px 20px 0px 15px;
     position: relative;
     float: right;
 }
@@ -173,7 +195,7 @@ h2{
 
 #maxime{
     color: #0063B1;
-    font-weight: 550;
+    font-weight: 600;
 }
 
 .job_title{
@@ -188,17 +210,12 @@ h2{
     padding-bottom: 5px;
 }
 
-/*fomation*/
 
+/*formation*/
 /*experience PRO*/
-
 /*Recommandations*/
 
-.right_text{
-    display: flex;
-    padding-left: 20px;
-}
-
+/*date and places right section*/
 .left_side{
     display: block;
     width: 30%;
@@ -207,21 +224,33 @@ h2{
 .left_side li{
     margin-left: -20px;
     margin-bottom: -13px;
-}
-.place{
-    margin-left: 30px;
+    width: 100%;
 }
 
+.left_side 
+
+/*formations places*/
+.place{
+    margin-left: 20px;
+    font-style: italic;
+}
+
+/*right text in right section*/
 .right_side{
     display: block;
     width: 70%;
     margin-right: 0px;
 }
 
+.right_text{
+    display: flex;
+    margin-left: 8px;
+}
+
 .right_bloc i{
     margin-right: 25px;
     color: #0063B1;
-    width: 25px;   
+    width: 25px;
 }
 
 h4{
@@ -237,14 +266,21 @@ h5{
     margin-bottom: 0px;
 }
 
-/*lieus de formations*/
-.place{
-    font-style: italic;
+
+/*recommandations bloc*/
+
+.recommandations_content{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: flex-start;
+    margin-left: -8px;
 }
 
 .recommandation_bloc_1, .recommandation_bloc_2{
     line-height: 40%;
-    text-align: center;
+    padding-right: 70px;
+
 }
 
 .recommandations_bloc ul{
@@ -262,17 +298,14 @@ h5{
     font-weight: bold;
 }
 
+/*recommandations people names*/
 .strong_name{
     font-weight: 600;
 }
 
 
-/*Responsive design*/
 
-body{
-    max-width: 1000px;
-    margin: auto;
-}
+/*Responsive design*/
 
 /*left bloc responsive*/
 
@@ -290,9 +323,12 @@ body{
 }
 
 
-/*conditions écrans téléphone*/
+/*Media queries*/ 
+
+/*conditions smartphone display*/
 @media screen and (max-width: 789px){
 
+    /*main page*/
     .content{
         display: flex;
         flex-direction: column;
@@ -303,17 +339,26 @@ body{
         display: none;
     }
 
-    /*bloc droit*/
+    /*right bloc*/
     
     .right_bloc{
         max-width: 789px;
     }
 
+    /*left bloc*/
     .left_bloc{
         max-width: 789px;
     }
 
-    /*Contenu droit*/
+    .contact_bloc{
+        margin-top: -40px;
+    }
+
+    .a_propos_bloc{
+        margin-bottom: 200px;
+    }
+
+    /*Right content*/
     .right_text{
         display: flex;
         flex-direction: column;
@@ -324,26 +369,57 @@ body{
         width: 100%;
     }
 
-    .contact_title{
-        margin-top: -0px;
-    }
+    
    
 }
 
+/*conditions small smartphone display*/
 @media screen and (max-width: 550px){
 
     .profil_picture_2{
         border-radius: 50%;
-        width: 150px;
+        width: 180px;
         border: #0063B1 4px solid;
-        margin: -50px 0px 0px 15px;
+        margin: auto;
+        margin-top: 10px;
+        margin-bottom: -20px;
         position: relative;
-        float: right;
+    }
+
+    .name_bloc{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: -50px;
+    }
+
+    /*right bloc*/
+    .right_bloc{
+        min-width: 0px;
+    }
+
+    .right_bloc{
+        padding: 20px;   
+    }
+
+    /*left bloc*/
+    .left_bloc{
+        min-width: 0px;
+    }
+
+    .a_propos_content, .loisirs_content{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .contact_content{
+        padding-left: 0px;
+        padding-right: 0px;
     }
 
 }
 
-/*conditions écrans PC*/
+/*conditions PC display*/
 @media screen and (min-width:790px){
 
     .profil_picture_2{
@@ -358,4 +434,35 @@ body{
 
 
 
+}
+
+/*conditions for recommandations, place and date content*/
+@media screen and (max-width: 960px){
+
+    .recommandations_content{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .recommandation_bloc_1, .recommandation_bloc_2{
+        text-align: center;
+        margin-bottom: 20px;
+        padding-right: 0px;
+    }
+
+    .right_text{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .right_side{
+        width: 95%;
+    }
+
+    .left_side{
+        display: block;
+        width: 100%;
+    }
 }
