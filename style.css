@@ -153,6 +153,24 @@ h2{
     margin-bottom: 0px;
 }
 
+/*projet bloc*/
+.projet_bloc{
+    margin-top: -40px;
+}
+
+.projet{
+    width: 95%;
+}
+
+.projet li{
+    margin-bottom: 20px;
+}
+
+.projet i{
+    color: #263238;
+}
+
+
 
 
 /*right part (white)*/
@@ -268,40 +286,6 @@ h5{
 
 
 /*recommandations bloc*/
-
-.recommandations_content{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-content: flex-start;
-    margin-left: -8px;
-}
-
-.recommandation_bloc_1, .recommandation_bloc_2{
-    line-height: 40%;
-    padding-right: 70px;
-
-}
-
-.recommandations_bloc ul{
-    margin: 0;
-
-}
-
-.recommandations_bloc a{
-    text-decoration: none;
-    color: #0063B1;
-}
-
-.recommandations_bloc a:hover{
-    color: #004073;
-    font-weight: bold;
-}
-
-/*recommandations people names*/
-.strong_name{
-    font-weight: 600;
-}
 
 
 
