@@ -240,6 +240,7 @@ h2{
 }
 
 .left_side li{
+    font-weight: bold;
     margin-left: -20px;
     margin-bottom: -13px;
     width: 100%;
